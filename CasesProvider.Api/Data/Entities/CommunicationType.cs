@@ -19,5 +19,5 @@ public class CommunicationType
 		public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
 		// Navigation properties
-		public ICollection<SupportCase> SupportCases { get; set; }
+		public ICollection<SupportCase> SupportCases { get; set; } = null!;
 }

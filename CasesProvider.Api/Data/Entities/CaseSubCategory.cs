@@ -15,15 +15,14 @@ public class CaseSubCategory
 
 		[Required]
 		[StringLength(50)]
-		public string SubCategoryName { get; set; }
+		public string SubCategoryName { get; set; } = null!;
 
 		[Required]
 		public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
-		[Required]
-		public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
+		public DateTime? UpdatedAt { get; set; }
 
 		// Navigation properties
 		[ForeignKey(nameof(ParentCategoryId))]
-		public CaseCategory ParentCategory { get; set; }
+		public CaseCategory ParentCategory { get; set; } = null!;
 }

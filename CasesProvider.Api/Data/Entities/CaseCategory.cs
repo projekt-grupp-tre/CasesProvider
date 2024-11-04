@@ -18,10 +18,9 @@ public class CaseCategory
 		[Required]
 		public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
-		[Required]
-		public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
+		public DateTime? UpdatedAt { get; set; }
 
 		// Navigation properties
-		public ICollection<SupportCase> SupportCases { get; set; }
-		public ICollection<CaseSubCategory> SubCategories { get; set; }
+		public ICollection<SupportCase> SupportCases { get; set; } = null!;
+		public ICollection<CaseSubCategory> SubCategories { get; set; } = null!;
 }

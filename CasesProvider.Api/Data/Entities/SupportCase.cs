@@ -27,31 +27,28 @@ public class SupportCase
 		[Required]
 		public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
-		[Required]
-		public DateTime AssignedAt { get; set; } = DateTime.UtcNow;
+		public DateTime? AssignedAt { get; set; }
 
-		[Required]
-		public DateTime ClosedAt { get; set; } = DateTime.UtcNow;
+		public DateTime? ClosedAt { get; set; }
 
-		[Required]
-		public DateTime ReopenedAt { get; set; } = DateTime.UtcNow;
+		public DateTime? ReopenedAt { get; set; } 
 
 		[Required]
 		public Guid CommunicationTypeId { get; set; }
 
 		// Navigation properties
 		[ForeignKey(nameof(CustomerUserId))]
-		public User CustomerUser { get; set; }
+		public User CustomerUser { get; set; } = null!;
 
 		[ForeignKey(nameof(CaseOwnerUserId))]
-		public User CaseOwnerUser { get; set; }
+		public User? CaseOwnerUser { get; set; }
 
 		[ForeignKey(nameof(CategoryId))]
-		public CaseCategory Category { get; set; }
+		public CaseCategory Category { get; set; } = null!;
 
 		[ForeignKey(nameof(CaseStatusId))]
-		public CaseStatus CaseStatus { get; set; }
+		public CaseStatus CaseStatus { get; set; } = null!;
 
 		[ForeignKey(nameof(CommunicationTypeId))]
-		public CommunicationType CommunicationType { get; set; }
+		public CommunicationType CommunicationType { get; set; } = null!;
 }

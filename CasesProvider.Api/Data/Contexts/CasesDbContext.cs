@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CasesProvider.Api.Data.Contexts;
 
-public class ApplicationDbContext : DbContext
+public class CasesDbContext : DbContext
 {
 	// DbSet properties for each entity
 	public DbSet<User> Users { get; set; }
@@ -15,7 +15,7 @@ public class ApplicationDbContext : DbContext
 	public DbSet<CaseStatus> CaseStatuses { get; set; }
 
 	// Constructor
-	public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+	public CasesDbContext(DbContextOptions<CasesDbContext> options) : base(options)
 	{
 	}
 

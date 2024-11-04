@@ -147,3 +147,4 @@
 /Users/levi/Desktop/CasesProvider/CasesProvider.Api/obj/Debug/net8.0/CasesProvider.Api.pdb
 /Users/levi/Desktop/CasesProvider/CasesProvider.Api/obj/Debug/net8.0/CasesProvider.Api.genruntimeconfig.cache
 /Users/levi/Desktop/CasesProvider/CasesProvider.Api/obj/Debug/net8.0/ref/CasesProvider.Api.dll
+/Users/levi/Desktop/CasesProvider/CasesProvider.Api/obj/Debug/net8.0/CasesProvider.Api.sourcelink.json

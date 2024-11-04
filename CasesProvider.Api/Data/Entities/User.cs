@@ -13,17 +13,17 @@ public class User
 
 		[Required]
 		[StringLength(50)]
-		public string Role { get; set; }
+		public string Role { get; set; } = null!;
 
 		[Required]
 		[StringLength(50)]
-		public string UserName { get; set; }
+		public string UserName { get; set; } = null!;
 
 		[Required]
 		[StringLength(100)]
 		[EmailAddress]
-		public string Email { get; set; }
+		public string Email { get; set; } = null!;
 
-		public ICollection<SupportCase> CustomerCases { get; set; }
-		public ICollection<SupportCase> OwnedCases { get; set; }
+		public ICollection<SupportCase>? CustomerCases { get; set; }
+		public ICollection<SupportCase>? OwnedCases { get; set; }
 }

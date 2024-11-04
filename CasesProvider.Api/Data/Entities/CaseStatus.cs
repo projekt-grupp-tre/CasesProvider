@@ -12,11 +12,11 @@ public class CaseStatus
 		public Guid Id { get; set; }
 
 		[StringLength(50)]
-		public CaseStatusTypeEnum StatusName { get; set; }
+		public CaseStatusTypeEnum StatusName { get; set; } = CaseStatusTypeEnum.NotOpened;
 
 		[Required]
 		public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
 		// Navigation properties
-		public ICollection<SupportCase> SupportCases { get; set; }
+		public ICollection<SupportCase> SupportCases { get; set; } = null!;
 }
